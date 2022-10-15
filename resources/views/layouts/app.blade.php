@@ -86,12 +86,12 @@
 
 <footer class="app-footer">
     <div>
-        <a href="">DW2 </a>
-        <span>&copy; 2022 DW2.</span>
+        <a href="">DW3 </a>
+        <span>&copy; 2022 DW3.</span>
     </div>
     <div class="ml-auto">
         <span>Powered by</span>
-        <a href="">DW2</a>
+        <a href="">DW3</a>
     </div>
 </footer>
 

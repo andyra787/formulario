@@ -22,7 +22,7 @@
 </head>
 <body >
 
-    <section class="h-100 gradient-form" style="background-color: #eee;">
+    <section class="h-100 gradient-form" style="background-color: #9E9E9E;">
         <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-xl-10">
@@ -43,14 +43,14 @@
                         <p></p>
 
                         <div class="form-outline mb-4">
-                        <input type="email" id="form2Example11" class="form-control {{ $errors->has('email')?'is-invalid':'' }}"
-                            placeholder="Email"  name="email" />
-                        <label class="form-label" for="form2Example11">Email</label>
+                            <label class="form-label" for="form2Example11">Email</label>
+                            <input type="email" id="form2Example11" class="form-control {{ $errors->has('email')?'is-invalid':'' }}"
+                                placeholder="Email"  name="email" />
                         </div>
 
                         <div class="form-outline mb-4">
-                        <input type="password" id="form2Example22" class="form-control {{ $errors->has('password')?'is-invalid':'' }}"  placeholder="Password" name="password"/>
-                        <label class="form-label" for="form2Example22">Password</label>
+                            <label class="form-label" for="form2Example22">Password</label>
+                            <input type="password" id="form2Example22" class="form-control {{ $errors->has('password')?'is-invalid':'' }}"  placeholder="Password" name="password"/>
                         </div>
 
                         <div class="text-center pt-1 mb-5 pb-1">

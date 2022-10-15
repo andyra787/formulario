@@ -20,7 +20,7 @@
 </head>
 <body>
 
-    <section class="h-100 gradient-form" style="background-color: #eee;">
+    <section class="h-100 gradient-form" style="background-color: #9E9E9E">
         <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-xl-10">
@@ -33,17 +33,18 @@
                         {{--<img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"--}}
                             <img src="/logomis.png"
                         style="width: 100px;" alt="logo">
-                        <h4 class="mt-1 mb-5 pb-1">ANALISIS DE SISTEMAS</h4>
+                        <h3 class="mt-1 mb-2 pb-1">ANALISIS DE SISTEMAS</h3>
                     </div>
 
                     <form method="post" action="{{ url('/register') }}">
                         @csrf
-                        <p>Crear cuenta</p>
+                        <center><h3>Crear cuenta</h3></center>
 
                         <div class="form-outline mb-4">
-                        <input type="text" id="form2Example11" class="form-control {{ $errors->has('name')?'is-invalid':'' }}" name="name" value="{{ old('name') }}"
-                            placeholder="Nombre Completo"/>
-                        <label class="form-label" for="form2Example11">Nombre</label>
+                            <label class="form-label" for="form2Example11">Nombre</label>
+                            <input type="text" id="form2Example11" class="form-control {{ $errors->has('name')?'is-invalid':'' }}" name="name" value="{{ old('name') }}"
+                                placeholder="Nombre Completo"/>
+                        
                             @if ($errors->has('name'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('name') }}</strong>
@@ -52,9 +53,9 @@
                         </div>
 
                         <div class="form-outline mb-4">
-                            <input type="email" id="form2Example11" class="form-control {{ $errors->has('email')?'is-invalid':'' }}" name="email" value="{{ old('email') }}" placeholder="Email"
-                                />
-                            <label class="form-label" for="form2Example11">Email</label>
+                            <label class="form-label" for="form2Example11">Email</label>    
+                            <input type="email" id="form2Example11" class="form-control {{ $errors->has('email')?'is-invalid':'' }}" name="email" value="{{ old('email') }}" placeholder="Email"/>
+                            
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -63,18 +64,20 @@
                         </div>
 
                         <div class="form-outline mb-4">
-                        <input type="password" id="form2Example22" class="form-control {{ $errors->has('password')?'is-invalid':''}}" name="password" placeholder="Contraseña"/>
-                        <label class="form-label" for="form2Example22">Contraseña</label>
-                        @if ($errors->has('password'))
-                        <span class="invalid-feedback">
-                            <strong>{{ $errors->first('password') }}</strong>
-                        </span>
-                        @endif
+                            <label class="form-label" for="form2Example22">Contraseña</label>
+                            <input type="password" id="form2Example22" class="form-control {{ $errors->has('password')?'is-invalid':''}}" name="password" placeholder="Contraseña"/>
+                        
+                            @if ($errors->has('password'))
+                            <span class="invalid-feedback">
+                                <strong>{{ $errors->first('password') }}</strong>
+                            </span>
+                            @endif
                         </div>
 
                         <div class="form-outline mb-4">
+                            <label class="form-label" for="form2Example22">Confirmar contraseña</label>    
                             <input type="password" id="form2Example22" class="form-control"  placeholder="Confirmar contraseña" name="password_confirmation"/>
-                            <label class="form-label" for="form2Example22">Confirmar contraseña</label>
+                            
                                 @if ($errors->has('password_confirmation'))
                                     <span class="help-block">
                                     <strong>{{ $errors->first('password_confirmation') }}</strong>
